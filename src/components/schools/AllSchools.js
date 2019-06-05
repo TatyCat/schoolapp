@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
-// import SelectedSchool from './pages/SelectedSchoolPG';
 import SchoolsTeachersStudents from '../../data/SchoolsTeachersStudents'
 import { Link } from 'react-router-dom'
-
+import './Schools.css'
 
 class AllSchools extends Component {
   state = {
@@ -16,7 +15,7 @@ class AllSchools extends Component {
   render() {
     return (
       <>
-        <ul>
+        <ul className="schoolsList">
           {this.state.schools.map((schoolList, index) => {
             return (
               <li key={index}>

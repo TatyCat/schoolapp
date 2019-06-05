@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
 import SchoolsHomePg from './pages/SchoolsHomePg'
 import SelectedSchool from './pages/SelectedSchoolPG';
+import TeachersPg from './pages/TeachersPg'
 
 
 class App extends Component {
@@ -13,13 +14,7 @@ class App extends Component {
             <Route path="/" exact component={SchoolsHomePg} />
             <Route path="/schools" exact component={SchoolsHomePg} />
             <Route path="/schools/:school" component={SelectedSchool} />
-
-            {/* <Route
-              path="/:tummyTreat/:treatyMcTreatFace"
-              exact
-              component={Pastry} */}
-            {/* /> */}
-            {/* <Route path="/pies/pumpkin" exact component={Pumpkin} /> */}
+            <Route path="/teachers" exact component={TeachersPg} />
           </Switch>
         </Router>
       </>
