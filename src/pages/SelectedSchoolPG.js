@@ -3,6 +3,7 @@ import Header from '../components/header/Header'
 import HeaderNav from '../components/header/HeaderNav'
 import '../components/schools/Schools.css'
 
+
 class SelectedSchool extends Component {
   constructor(props) {
     super(props)
@@ -16,31 +17,31 @@ class SelectedSchool extends Component {
         <section>
           <h1>{this.state.Name} <span>ID: [{this.state.Id}]</span></h1>
           <p>{this.state.Description}</p>
-          <p>{this.state.IsOpen ? "Available for Enrollment" : "NOT Available for Enrollment"}</p>
+          <p>{this.state.IsOpen ? "Accepting Enrollment" : "NOT Accepting Enrollment"}</p>
         </section>
 
         <section>
-          <h2>Teachers:</h2>
-
           {this.state.Teachers.map((teacher, i) => {
             return (
               <ul key={i + "list"}>
-                <li key={i + "classroom"}>
-                  <p className="teacher">
-                    {teacher.Name} - ID: [{teacher.Id}]
-                </p>
-                </li>
                 <li>
                   <table>
-                    <thead><tr key={i + "studentList"}>{teacher.Name}'s Students:</tr></thead>
+                    <thead>
+                      <tr key={i + "studentList"}>
+                        <th>{teacher.Name}'s Students:</th>
+                      </tr>
+                      <tr>
+                        <th>Student ID:</th>
+                        <th>Name:</th>
+                        <th>Status:</th>
+                      </tr>
+                    </thead>
                     <tbody>
                       {teacher.Students.map((student, i) => {
                         return (
-                          <tr key={i}><th>ID:</th>
-                            <td>{student.Id}</td>
-                            <th>Name:</th>
+                          <tr key={i}>
+                            <td>[{student.Id}]</td>
                             <td>{student.Name}</td>
-                            <th>Status:</th>
                             <td>{student.IsEnrolled ? "Enrolled" : "Not Enrolled"}</td>
                           </tr>
                         )
@@ -56,6 +57,5 @@ class SelectedSchool extends Component {
     );
   }
 }
-// key={i+"student"}
 
 export default SelectedSchool;

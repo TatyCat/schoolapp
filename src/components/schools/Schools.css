@@ -21,15 +21,59 @@ ul {
 
 /* selectedSchool Section */
 
-selectedSchool li:nth-child(even) {
-  background-color: rgb(212, 212, 212);
-  padding: 1vh;
+ul {
+  overflow: hidden;
+  padding-left: 0;
 }
 
-td {
-  padding: .7vh;
+table {
+  border-collapse: collapse;
+  border-radius: 0 0 10px 10px;
+  width: 90vw;
+  overflow: auto;
+}
+
+thead th {
+  padding: .32rem;
+}
+
+tbody tr, tbody td {
+  padding: 2.3vh;
+  background: #ddd;
+  border-bottom: 2px solid white;
+}
+
+tbody td {
+  width: 10%;
 }
 
 .teacher {
   font-weight: 700;
+}
+
+/* Mobile Responsive Tables */
+
+@media all and (max-width:500px) {
+  .selectedSchool thead {
+    display: flex;
+    flex-direction: column;
+    padding: .40vh;
+    padding-bottom: 0%;
+  }
+  .selectedSchool thead tr:nth-child(2) {
+    color: rgba(102, 102, 102, 0.904);
+  }
+  .selectedSchool tbody tr {
+    display: flex;
+    flex-direction: column;
+    width: 99vw;
+    margin-top: 3vh;
+    padding: 0%;
+  }
+  .selectedSchool tbody td {
+    width: auto;
+  }
+  .selectedSchool tbody tr:nth-child(1) {
+    margin-top: 0%;
+  }
 }
