@@ -46,15 +46,19 @@ nav a {
   border-radius: 5%;
   padding: 8% 7%;
   color: rgb(29, 29, 29) !important;
+  border: .5px transparent solid;
 }
 
 nav a:hover {
-  border: .5px whitesmoke solid;
-  background-color: whitesmoke;
+  border: .5px white solid;
+  background-color: white;
 }
 
-nav a.active {
-  background-color: pink;
-  color: #444 !important;
+.active {
+  background-color: white;
+  border: none;
+  border-left: 4px rgb(121, 120, 120) solid !important;
+  color: rgba(95, 95, 95, 0.87) !important;
+  border-radius: 0;
   cursor: default;
 }
