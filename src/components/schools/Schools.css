@@ -29,12 +29,15 @@ article {
 .schoolsList li {
   padding: 2vh;
   margin: 1vh;
-  background: #ddd;
+  background: rgba(133, 133, 133, 0.171);
+  background: rgba(221, 221, 221, 0.616);
   list-style-type: none;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid gray;
+  border-radius: 4px;
 }
 
 .schoolsList li:hover {
+  background: rgb(112, 112, 112);
   opacity: .5;
 }
 

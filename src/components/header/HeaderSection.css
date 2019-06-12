@@ -49,16 +49,10 @@ nav a {
   border: .5px transparent solid;
 }
 
-nav a:hover {
-  border: .6px white solid;
-  background-color: white;
-}
-
 .active {
   background-color: white;
   border: .5px white solid;
   color: rgb(206, 64, 21) !important;
-  border-left: 3.5px rgba(180, 45, 0, 0.596) solid !important;
   -webkit-box-shadow: 10px 0 5px -2px #888;
   box-shadow: 10px 0 -5px -2px #888;
   color: rgba(95, 95, 95, 0.87) !important;
