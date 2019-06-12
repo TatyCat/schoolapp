@@ -9,13 +9,14 @@ class SelectedSchool extends Component {
     super(props)
     this.state = this.props.location.state.selectedSchoolData
   }
+
   render() {
     return (
       <main className="selectedSchool">
         <Header />
-        <HeaderNav />
+        <HeaderNav tabClicked={this.props.match.path} />
         <section>
-          <h1>{this.state.Name} <span>ID: [{this.state.Id}]</span></h1>
+          <h1>{this.state.Name} <span>[ID: {this.state.Id}]</span></h1>
           <p>{this.state.Description}</p>
           <p>{this.state.IsOpen ? "Accepting Enrollment" : "NOT Accepting Enrollment"}</p>
         </section>

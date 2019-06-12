@@ -14,23 +14,26 @@ class AllSchools extends Component {
 
   render() {
     return (
-      <>
-        <ul className="schoolsList">
-          {this.state.schools.map((schoolList, index) => {
-            return (
-              <li key={index}>
-                <Link to={{
-                  pathname: `/schools/${schoolList.Id}`,
-                  state: { selectedSchoolData: this.state.schools[index] }
-                }} >
-                  [ID: {schoolList.Id}]   {schoolList.Name}
-                </Link>
-              </li>
-            )
+      <article>
+        <h1>District Schools</h1>
+        <ul className="schoolsList" key={this.props.i + "allSchoolsList"} >
+          {
+            this.state.schools.map((schoolList, index) => {
+              return (
+                <li>
+
+                  <Link key={index} to={{
+                    pathname: `/schools/${schoolList.Id}`,
+                    state: { selectedSchoolData: this.state.schools[index] }
+                  }} >
+                    [ID: {schoolList.Id}]   {schoolList.Name}
+                  </Link>
+                </ li>
+              )
+            })
           }
-          )}
-        </ul>
-      </>
+        </ ul>
+      </article>
     );
   }
 }

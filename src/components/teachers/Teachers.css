@@ -2,22 +2,33 @@ article {
   margin: 2rem;
 }
 
-ul li span::before {
-  content: "\A";
-  white-space: pre;
-  line-height: 2
-}
-
 h1 {
   color: rgb(206, 64, 21);
 }
 
 .teacherList {
+  list-style-type: none;
   margin: 1vh;
 }
 
 .teacherList li {
   padding: 2vh;
   background: #ddd;
-  border-bottom: 2px solid white;
+  border-bottom: 2px solid rgba(223, 223, 223, 0.87);
+  font-size: 2.25vh;
+  display: flex;
+  justify-content: space-between;
+}
+
+.teacherList li span {
+  visibility: hidden;
+}
+
+@media all and (max-width:500px) {
+  .teacherList li {
+    display: block;
+  }
+  .teacherList li span {
+    visibility: visible;
+  }
 }

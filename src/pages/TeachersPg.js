@@ -19,11 +19,11 @@ class TeachersPg extends Component {
     return (
       <>
         <Header />
-        <HeaderNav />
+        <HeaderNav tabClicked={this.props.match.path} />
         <article>
-          <h1>District Teachers:</h1>
+          <h1>District Teachers</h1>
           {this.state.schools.map((schoolList, index) => {
-            return <TeacherList teacherData={schoolList.Teachers} school={schoolList.Name} i={index} />
+            return <TeacherList teacherData={schoolList.Teachers} school={schoolList.Name} i={index} key={index} />
           })}
         </article>
       </>

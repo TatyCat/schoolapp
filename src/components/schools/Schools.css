@@ -4,46 +4,67 @@ section {
   margin: 2rem;
 }
 
-ul {
-  list-style: none;
-}
-
 /* all schools page */
 
-.schoolsList li {
-  font-size: 2.7vh;
-  margin: 2vh;
+article {
+  margin: 2rem;
 }
 
-.schoolsList a:visited, .schoolsList a:link {
-  color: black;
+.schoolsList.ul li span::before {
+  content: "\A";
+  white-space: pre;
+  line-height: 2;
+}
+
+.schoolsList h1 {
+  color: rgb(206, 64, 21);
+}
+
+.schoolsList a {
+  text-decoration: none;
+  color: unset;
+  font-size: 2.4vh;
+}
+
+.schoolsList li {
+  padding: 2vh;
+  margin: 1vh;
+  background: #ddd;
+  list-style-type: none;
+  border-bottom: 2px solid white;
+}
+
+.schoolsList li:hover {
+  opacity: .5;
 }
 
 /* selectedSchool Section */
 
-ul {
+.selectedSchool ul {
   overflow: hidden;
   padding-left: 0;
+  list-style-type: none;
 }
 
-table {
+.selectedSchool table {
   border-collapse: collapse;
   border-radius: 0 0 10px 10px;
   width: 90vw;
   overflow: auto;
+  list-style-type: none;
 }
 
-thead th {
+.selectedSchool thead th {
   padding: .32rem;
 }
 
-tbody tr, tbody td {
+.selectedSchool tbody tr, tbody td {
   padding: 2.3vh;
   background: #ddd;
   border-bottom: 2px solid white;
 }
 
-tbody td {
+.selectedSchool tbody td {
   width: 10%;
 }
 

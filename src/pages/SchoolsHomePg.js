@@ -8,7 +8,7 @@ class Schools extends Component {
     return (
       <>
         <Header />
-        <HeaderNav />
+        <HeaderNav tabClicked={this.props.match.path} />
         <AllSchools />
       </>
     );

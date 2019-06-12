@@ -4,27 +4,29 @@ import { Link } from 'react-router-dom'
 
 
 class headerNav extends Component {
-  state = {
+  componentWillMount() {
+    this.setState({ activeTab: this.props.tabClicked })
   }
-  newTab = (linkClicked) => {
-    console.log(linkClicked)
 
+  state = {
+    activeTab: "",
   }
+
   render() {
     return (
-      <nav>
+      < nav >
         <ul>
           <li>
-            <Link to={"/schools"} onClick={() => this.newTab("schools")} className={this.state.activeLink ? 'schools' : ""}>Schools</Link>
+            <Link to={"/schools"} className={this.state.activeTab === '/schools' || this.state.activeTab === '/schools/:school' ? 'active' : ""}>Schools</Link>
           </li>
           <li>
-            <Link to="/teachers" onClick={() => this.newTab("teachers")} className={this.state.activeLink ? 'active' : ""}>Teachers</Link>
+            <Link to="/teachers" className={this.state.activeTab === '/teachers' ? 'active' : ""}>Teachers</Link>
           </li>
           <li>
-            <Link to="/students" onClick={() => this.newTab("students")} className={this.state.activeLink ? 'active' : ""}>Students</Link>
+            <Link to="/students" className={this.state.activeTab === '/students' ? 'active' : ""}>Students</Link>
           </li>
         </ul>
-      </nav>
+      </nav >
     );
   }
 }
